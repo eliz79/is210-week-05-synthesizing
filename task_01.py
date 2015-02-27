@@ -6,6 +6,7 @@ import decimal
 
 ABSOLUTE_DIFFERENCE = decimal.Decimal(273.15)
 
+
 def fahrenheit_to_celsius(degrees):
 
     """A function that will convert degrees from Fahreheit to Celsius
@@ -19,9 +20,8 @@ def fahrenheit_to_celsius(degrees):
     Example:
         >>>fahrenheit_to_celsius(212)
         Decimal('100')
-        
     """
-    return (decimal.Decimal(degrees - 32)* 5) / 9
+    return (decimal.Decimal(degrees - 32) * 5) / 9
 
 
 def celsius_to_kelvin(degrees):
@@ -37,7 +37,6 @@ def celsius_to_kelvin(degrees):
     Example:
         >>>celsius_to_kelvin(100)
         Decimal('373.15')
-        
     """
     return (decimal.Decimal(degrees + ABSOLUTE_DIFFERENCE))
 
@@ -55,11 +54,8 @@ def farenheit_to_kelvin(degrees):
     Example:
         >>>farenheit_to_kelvin(212)
         Decimal('373.15')
-        
-    """
+        """
     return farenheit_to_celsius(degrees) + ABSOLUTE_DIFFERENCE
-
-
 
 F_TO_K = farenheit_to_kelvin(212) + ABSOLUTE_DIFFERENCE
 print F_TO_K
